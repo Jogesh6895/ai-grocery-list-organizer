@@ -1,6 +1,6 @@
-# Grocery Categorizer
+# AI Grocery List Organizer
 
-An AI-powered grocery categorization tool that organizes and sorts grocery items into appropriate categories using local LLM models via Ollama.
+AI-powered grocery categorization tool that automatically organizes shopping lists into intelligent categories using local LLM models. Perfect for organized shopping.
 
 ## Features
 
@@ -32,7 +32,7 @@ An AI-powered grocery categorization tool that organizes and sorts grocery items
 
 ```bash
 git clone <repository-url>
-cd new_implementation
+cd ai_grocery_list_organizer
 ```
 
 2. Install Python dependencies:
@@ -109,7 +109,7 @@ python -m src.cli --mode file --input grocery_list.txt --model llama3.2:1b
 ## Directory Structure
 
 ```
-new_implementation/
+ai_grocery_list_organizer/
 ├── src/
 │   ├── __init__.py
 │   ├── cli.py           # Command-line interface
@@ -122,9 +122,11 @@ new_implementation/
 ├── tests/
 │   └── fixtures/        # Test data
 ├── .gitignore
+├── LICENSE              # MIT License
 ├── requirements.txt
 ├── README.md
-└── AGENTS.md
+├── AGENTS.md
+└── TEST_REPORT.md
 ```
 
 ## Input Format
@@ -237,4 +239,4 @@ Please see `AGENTS.md` for guidelines on contributing to this project.
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

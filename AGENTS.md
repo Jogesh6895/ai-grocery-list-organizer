@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This document provides guidelines for AI agents and developers contributing to the Grocery Categorizer project.
+This document provides guidelines for AI agents and developers contributing to the AI Grocery List Organizer project.
 
 ## Code Style Guidelines
 
