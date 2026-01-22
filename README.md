@@ -197,17 +197,17 @@ pytest tests/test_integration.py -v
 
 ### Test Coverage
 
-The test suite includes:
+The test suite includes 50 total test cases across 6 test modules:
 
-- **Unit Tests**: Test individual components in isolation
-  - `test_models.py` - Data model tests
-  - `test_config.py` - Configuration management tests
-  - `test_file_handler.py` - File I/O operation tests
-  - `test_categorizer.py` - Core categorization logic tests
-  - `test_cli.py` - Command-line interface tests
+- **Unit Tests**: Test individual components in isolation (42 tests)
+  - `test_models.py` (9 tests) - Data model tests
+  - `test_config.py` (3 tests) - Configuration management tests
+  - `test_file_handler.py` (5 tests) - File I/O operation tests
+  - `test_categorizer.py` (9 tests) - Core categorization logic tests
+  - `test_cli.py` (16 tests) - Command-line interface tests
 
-- **Integration Tests**: Test complete workflows
-  - `test_integration.py` - End-to-end workflow tests
+- **Integration Tests**: Test complete workflows (8 tests)
+  - `test_integration.py` (8 tests) - End-to-end workflow tests
 
 Target coverage: **≥85%**
 

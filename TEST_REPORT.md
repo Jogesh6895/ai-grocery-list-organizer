@@ -10,8 +10,15 @@ Comprehensive testing has been implemented for the AI Grocery List Organizer pro
 
 ### Test Statistics
 
-- **Total Test Files**: 6
-- **Test Modules Covered**: 5
+- **Total Test Files**: 6 test modules + 1 __init__.py
+- **Test Modules Covered**: 6
+  - test_models.py (9 tests)
+  - test_config.py (3 tests)
+  - test_file_handler.py (5 tests)
+  - test_categorizer.py (9 tests)
+  - test_cli.py (16 tests)
+  - test_integration.py (8 tests)
+- **Total Test Cases**: 50
 - **Integration Test Scenarios**: 8
 - **Target Coverage**: ≥85%
 
@@ -28,7 +35,7 @@ Tests for data models (dataclasses):
 - `CategorizedList` operations (add_category, get_items_by_category, get_all_categories)
 - `ProcessingResult` success and failure scenarios
 
-**Coverage**: All model classes and methods
+**Coverage**: All model classes and methods (9 total tests)
 
 #### test_config.py
 
@@ -38,7 +45,7 @@ Tests for configuration management:
 - Path resolution (input/output directories)
 - Directory creation and validation
 
-**Coverage**: All Config class methods
+**Coverage**: All Config class methods (3 total tests)
 
 #### test_file_handler.py
 
@@ -50,62 +57,81 @@ Tests for file I/O operations:
 - Content line extraction
 - Error handling for missing files
 
-**Coverage**: All FileHandler class methods
+**Coverage**: All FileHandler class methods (5 total tests)
 
 #### test_categorizer.py
 
 Tests for core categorization logic:
 
-- Prompt building
-- Successful categorization
+- Prompt building and validation
+- Successful categorization with multiple items
 - Empty input handling
+- Whitespace-only input handling
 - Retry mechanism on failures
 - Single item categorization
+- Single item categorization failure
 - Category suggestion functionality
+- Category suggestion failure handling
 
-**Coverage**: All GroceryCategorizer methods with mocked Ollama API calls
+**Coverage**: All GroceryCategorizer methods with mocked Ollama API calls (9 total tests)
 
-#### test_cli.py (NEW)
+#### test_cli.py
 
 Comprehensive CLI tests covering:
 
-- Logging setup (INFO, DEBUG levels)
-- File mode operations (success and error cases)
-- Batch mode processing (multiple files)
-- Interactive mode (user input simulation)
-- Suggest mode (category suggestions)
-- Main function with all modes
-- Argument validation
-- Keyboard interrupt handling
+- **TestSetupLogging** (2 tests):
+  - Logging setup with INFO level
+  - Logging setup with DEBUG level
 
-**Coverage**: All CLI functions and modes
+- **TestRunFileMode** (2 tests):
+  - Successful file mode execution
+  - File not found error handling
+
+- **TestRunBatchMode** (2 tests):
+  - Batch mode with multiple files
+  - No files found in batch mode
+
+- **TestRunInteractiveMode** (2 tests):
+  - Interactive mode with items
+  - Interactive mode with no items
+
+- **TestRunSuggestMode** (2 tests):
+  - Suggest mode success
+  - Suggest mode file error
+
+- **TestMain** (6 tests):
+  - Main function with file mode
+  - File mode missing input argument
+  - Main with batch mode
+  - Main with interactive mode
+  - Main with suggest mode
+  - Keyboard interrupt handling
+
+**Coverage**: All CLI functions and modes (16 total tests)
 
 ### 2. Integration Tests
 
-#### test_integration.py (NEW)
+#### test_integration.py
 
 End-to-end workflow tests:
 
-**TestEndToEndCategorization**:
+- **TestEndToEndCategorization** (2 tests):
+  - Complete workflow from file input to categorized output
+  - Empty input file handling
 
-- Complete workflow from file input to categorized output
-- Empty input file handling
+- **TestBatchProcessingWorkflow** (2 tests):
+  - Batch processing of multiple files
+  - Mixed success/failure scenarios
 
-**TestBatchProcessingWorkflow**:
+- **TestErrorRecovery** (3 tests):
+  - File not found error handling and recovery
+  - Categorization retry on failure
+  - All retries exhausted scenario
 
-- Batch processing of multiple files
-- Mixed success/failure scenarios
+- **TestDataFlowIntegration** (1 test):
+  - Configuration changes propagation through system
 
-**TestErrorRecovery**:
-
-- File not found error handling
-- Retry mechanism validation
-- Exhausted retry scenarios
-
-**TestDataFlowIntegration**:
-
-- Configuration propagation through system
-- Custom directory handling
+**Coverage**: End-to-end workflows (8 total tests)
 
 ## Test Dependencies
 
