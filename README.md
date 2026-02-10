@@ -1,5 +1,15 @@
 # AI Grocery List Organizer
 
+[![Python](https://img.shields.io/badge/Python-3.9+-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![Ollama](https://img.shields.io/badge/Ollama-LLM-000000?logo=ollama)](https://ollama.ai/)
+[![AI](https://img.shields.io/badge/AI-Powered-purple)]()
+[![Privacy](https://img.shields.io/badge/Privacy-Local%20Processing-brightgreen)]()
+[![CLI](https://img.shields.io/badge/CLI-Tool-orange)](https://en.wikipedia.org/wiki/Command-line_interface)
+[![Tests](https://img.shields.io/badge/Tests-pytest-success)](https://docs.pytest.org/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-brightgreen)](#-contributing)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blueviolet)](AGENTS.md)
+
 AI-powered grocery categorization tool that automatically organizes shopping lists into intelligent categories using local LLM models. Perfect for organized shopping.
 
 ## Features
